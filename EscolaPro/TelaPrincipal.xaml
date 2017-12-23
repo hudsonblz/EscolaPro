@@ -1,0 +1,212 @@
+﻿<Window
+    x:Class="EscolaPro.TelaPrincipal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:EscolaPro"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Escola Pro 0.9 Beta"
+    Width="1024"
+    Height="768"
+    MinWidth="800"
+    MinHeight="600"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    FontWeight="Regular"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid>
+        <ScrollViewer
+            Name="ScroolTelaPrincipal"
+            CanContentScroll="True"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <materialDesign:ColorZone
+                    Width="auto"
+                    Height="68"
+                    Margin="20,-20,20,4"
+                    VerticalAlignment="Top"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                    materialDesign:ShadowAssist.ShadowEdges="All"
+                    CornerRadius="20"
+                    Mode="PrimaryDark">
+                    <StackPanel
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                        <Menu
+                            HorizontalAlignment="Center"
+                            materialDesign:ColorZoneAssist.Mode="PrimaryMid"
+                            Background="Transparent"
+                            FontSize="20"
+                            IsMainMenu="True">
+                            <MenuItem Header="_Home">
+                                <MenuItem
+                                    Name="Home"
+                                    Background="White"
+                                    Click="Home_Click"
+                                    Header="Tela Principal">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Home" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Tarefas Agendadas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CalendarClock" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="MudarTema"
+                                    Background="White"
+                                    Click="MudarTema_Click"
+                                    Header="Mudar Tema">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatColorFill" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Sair">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="ExitToApp" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Alunos">
+                                <MenuItem Background="White" Header="_Cadastro">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountPlus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="_Consultar Aluno">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountCardDetails" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Background="White" Header="Notas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Numeric" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Ranking">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatListNumbers" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Turmas">
+                                <MenuItem Background="White" Header="_Cadastrar Turma">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Plus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="_Alterar Turma">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TableEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Procurar Turmas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Magnify" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="_Atividades">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="BookOpenPageVariant" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="_Lançar Notas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Numeric" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Background="White" Header="Ranking">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatListNumbers" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Financeiro">
+                                <MenuItem Background="White" Header="Pagamentos">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CashUsd" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Despesas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CreditCardOff" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Alterar Lançamentos">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TableEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Administrativo">
+                                <MenuItem Background="White" Header="Cadastrar Usuário">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Background="White" Kind="AccountPlus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Alterar Usuário">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TooltipEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Estatísticas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="ChartAreaspline" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Sobre">
+                                <MenuItem Background="White" Header="Suporte">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="HumanGreeting" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="White" Header="Versão">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Information" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                        </Menu>
+                        <materialDesign:Badged
+                            Margin="50,0,0,0"
+                            VerticalAlignment="Center"
+                            Badge="25">
+                            <Button
+                                Width="28"
+                                Height="28"
+                                Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                                ToolTip="Alertas">
+                                <materialDesign:PackIcon
+                                    Width="20"
+                                    Height="20"
+                                    Kind="Alarm" />
+                            </Button>
+                        </materialDesign:Badged>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+                <Frame
+                    Name="Navegador"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="20,30,20,10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    VerticalContentAlignment="Top"
+                    NavigationUIVisibility="Hidden" />
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

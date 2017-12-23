@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolaPro", "EscolaPro\EscolaPro.csproj", "{A6E784D9-BC4F-4B73-A1E3-8E35203F35A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "EscolaPro\GUI.csproj", "{A6E784D9-BC4F-4B73-A1E3-8E35203F35A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{519F4655-0CC8-4993-8F48-0CEF3580E42D}"
 EndProject

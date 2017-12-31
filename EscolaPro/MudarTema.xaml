@@ -4,8 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:EscolaPro"
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     HorizontalAlignment="Stretch"
     VerticalAlignment="Stretch"
     Background="{DynamicResource MaterialDesignPaper}"
@@ -57,19 +58,22 @@
                         Width="30"
                         Height="30"
                         Margin="10"
-                        IsChecked="True"
+                        IsChecked="False"
                         Style="{StaticResource MaterialDesignActionAccentToggleButton}"
-                        ToolTip="MaterialDesignActionAccentToggleButton" />
-                    <Button
-                        Width="30"
-                        Height="30"
-                        Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
-                        ToolTip="MaterialDesignFloatingActionAccentButton">
+                        ToolTip="MaterialDesignActionAccentToggleButton" >
                         <materialDesign:PackIcon
                             Width="24"
                             Height="24"
-                            Kind="Alarm" />
-                    </Button>
+                            Kind="Close" />
+                    </ToggleButton>
+                    <Button
+                        Width="32"
+                        Height="32"
+	materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+	materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+	materialDesign:ButtonProgressAssist.Value="-1"
+	Content="{materialDesign:PackIcon DotsHorizontal}"
+	Style="{StaticResource MaterialDesignFloatingActionAccentButton}" />
                 </StackPanel>
                 <TextBlock
                     Grid.Row="1"

@@ -34,14 +34,29 @@ namespace EscolaPro
             //Navegador.Navigate(new Conferencia(ActualHeight, ActualWidth));
         }
 
-        private void MudarTema_Click(object sender, RoutedEventArgs e)
+        private void btnMudarTema_Click(object sender, RoutedEventArgs e)
         {
             Navegador.Navigate(new MudarTema(ActualHeight, ActualWidth));
         }
 
-        private void Home_Click(object sender, RoutedEventArgs e)
+        private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             Navegador.Navigate(new Home());
+        }
+
+        private void btnSair_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Close();
+        }
+
+        private void btnCadastrarAluno_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new CadastrarAluno());
+        }
+
+        private void btnAgendarTarefa_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new AgendarTarefa());
         }
     }
 }

@@ -5,3 +5,10 @@ E:\Documentos\Visual Studio 2017\Projects\EscolaPro\DAL\obj\Debug\DAL.csprojReso
 E:\Documentos\Visual Studio 2017\Projects\EscolaPro\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\Documentos\Visual Studio 2017\Projects\EscolaPro\DAL\obj\Debug\DAL.dll
 E:\Documentos\Visual Studio 2017\Projects\EscolaPro\DAL\obj\Debug\DAL.pdb
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\bin\Debug\DAL.dll.config
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\bin\Debug\DAL.dll
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\bin\Debug\DAL.pdb
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\obj\Debug\DAL.dll
+C:\Users\hudso\Documents\GitHub\EscolaPro\DAL\obj\Debug\DAL.pdb

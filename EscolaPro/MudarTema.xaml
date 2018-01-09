@@ -17,10 +17,15 @@
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     mc:Ignorable="d">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Margin="10,10,10,20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock Margin="0,0,0,5"
+                    HorizontalAlignment="Center"
+                    FontSize="32"
+                    FontWeight="Normal">Mudar Tema</TextBlock>
+            <Separator Margin="20,5" Background="{DynamicResource PrimaryHueMidBrush}"></Separator>
             <Grid
                 Height="300"
-                Margin="50,100,50,10"
+                Margin="50,70,50,10"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>

@@ -24,22 +24,28 @@ namespace EscolaPro
         public AlterarAluno()
         {
             InitializeComponent();
+            InfoResponsavel.Visibility = Visibility.Collapsed;
         }
 
         private void AlunoResponsavel_Click(object sender, RoutedEventArgs e)
         {
             if ((bool)AlunoResponsavel.IsChecked)
             {
-                Responsavel.IsEnabled = true;
-                Responsavel.Visibility = Visibility.Hidden;
-                MaterialDesignThemes.Wpf.HintAssist.SetHint(CPF, "CPF do Responsável");
+                InfoResponsavel.IsEnabled = true;
+                InfoResponsavel.Visibility = Visibility.Collapsed;
+                MaterialDesignThemes.Wpf.HintAssist.SetHint(CPF, "CPF do Aluno");
             }
             else
             {
-                Responsavel.IsEnabled = true;
-                Responsavel.Visibility = Visibility.Visible;
-                MaterialDesignThemes.Wpf.HintAssist.SetHint(CPF, "CPF do Aluno");
+                InfoResponsavel.IsEnabled = true;
+                InfoResponsavel.Visibility = Visibility.Visible;
+                MaterialDesignThemes.Wpf.HintAssist.SetHint(CPF, "CPF do Responsável Contrato");
             }
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            InfoAluno.Visibility = Visibility.Visible;
         }
     }
 }

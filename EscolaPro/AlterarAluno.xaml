@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:EscolaPro"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:xceed="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     HorizontalAlignment="Stretch"
     VerticalAlignment="Stretch"
     Background="{DynamicResource MaterialDesignPaper}"
@@ -16,11 +16,55 @@
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     mc:Ignorable="d">
-    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Grid
-            Margin="10,20"
+    <StackPanel
+        Margin="10,10,10,20"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch">
+        <TextBlock
+            Margin="0,0,0,5"
             HorizontalAlignment="Center"
-            VerticalAlignment="Bottom">
+            FontSize="32"
+            FontWeight="Normal">
+            Alterar Aluno
+        </TextBlock>
+        <Separator Margin="20,5" Background="{DynamicResource PrimaryHueMidBrush}" />
+        <StackPanel
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <materialDesign:PackIcon
+                Width="24"
+                Height="24"
+                VerticalAlignment="Center"
+                Foreground="{Binding BorderBrush, ElementName=cbxAluno}"
+                Kind="AccountSearch" />
+            <TextBlock Margin="5" VerticalAlignment="Center">Selecionar Aluno:</TextBlock>
+            <ComboBox
+                Name="cbxAluno"
+                Width="280"
+                Margin="10,5">
+                <ComboBox.Items>
+                    <ComboBoxItem>Demo1</ComboBoxItem>
+                    <ComboBoxItem>Remo1</ComboBoxItem>
+                    <ComboBoxItem>Vemo1</ComboBoxItem>
+                    <ComboBoxItem>Femo1</ComboBoxItem>
+                </ComboBox.Items>
+            </ComboBox>
+            <Button
+                Name="btnBuscar"
+                Margin="5"
+                Click="btnBuscar_Click"
+                Content="Buscar" />
+        </StackPanel>
+
+        <Separator />
+        <Grid
+            Name="InfoAluno"
+            Margin="10,5,10,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50" />
                 <ColumnDefinition Width="100" />
@@ -37,229 +81,546 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
+            <!--#region Informaçoes do aluno-->
             <materialDesign:PackIcon
                 Grid.Row="0"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
+                Margin="5"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Kind="Numeric" />
-            <TextBlock
-                Name="numeromat"
-                Grid.Row="0"
-                Grid.Column="1"
-                TextWrapping="Wrap"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                Text="Número de Matricula:" />
-
-            <TextBlock
-                Name="NumeroMatricula"
-                Grid.Column="2"
-                Margin="10,0"
-                VerticalAlignment="Center"
-                Grid.Row="0" 
-                FontSize="20"/>
-            <materialDesign:PackIcon
-                Grid.Row="1"
-                Grid.Column="0"
-                Width="20"
-                Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=Nome, Path=BorderBrush}"
+                Foreground="{Binding BorderBrush, ElementName=Nome}"
                 Kind="Account" />
             <TextBlock
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="1"
+                Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Text="Nome:" />
 
             <TextBox
-                Name="Nome"
+                x:Name="Nome"
+                Grid.Row="0"
                 Grid.Column="2"
-                Margin="10,0"
+                Margin="10,5"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Nome do Aluno"
                 materialDesign:HintAssist.IsFloating="True"
-                TabIndex="1"
-                Grid.Row="1" />
-
+                TabIndex="1" />
 
             <materialDesign:PackIcon
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
+                Margin="5"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=DataNascimento, Path=BorderBrush}"
+                Foreground="{Binding BorderBrush, ElementName=DataNascimento}"
                 Kind="Calendar" />
             <TextBlock
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="1"
+                Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Text="Data Nasc:" />
             <DatePicker
-                Name="DataNascimento"
-                Grid.Row="2"
+                x:Name="DataNascimento"
+                Grid.Row="1"
                 Grid.Column="2"
-                Margin="10,10,10,0"
+                Margin="10,15,10,5"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Data de Nascimento"
                 materialDesign:HintAssist.IsFloating="True"
                 Language="pt-br"
                 SelectedDateFormat="Short"
                 TabIndex="2" />
+
             <materialDesign:PackIcon
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
+                Margin="5"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=Email, Path=BorderBrush}"
+                Foreground="{Binding BorderBrush, ElementName=Email}"
                 Kind="MailRu" />
             <TextBlock
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="1"
+                Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Text="E-mail:" />
             <TextBox
-                Name="Email"
-                Grid.Row="3"
+                x:Name="Email"
+                Grid.Row="2"
                 Grid.Column="2"
-                Margin="10,0"
+                Margin="10,5"
                 VerticalAlignment="Center"
-                materialDesign:HintAssist.Hint="Email do Aluno"
+                materialDesign:HintAssist.Hint="E-mail do Aluno"
                 materialDesign:HintAssist.IsFloating="True"
                 TabIndex="3" />
             <materialDesign:PackIcon
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
+                Margin="5"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=Telefone, Path=BorderBrush}"
+                Foreground="{Binding BorderBrush, ElementName=Telefone}"
                 Kind="PhoneClassic" />
             <TextBlock
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="1"
+                Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Text="Telefone:" />
-            <TextBox
-                Name="Telefone"
-                Grid.Row="4"
+            <xctk:MaskedTextBox
+                x:Name="Telefone"
+                Grid.Row="3"
                 Grid.Column="2"
-                Margin="10,0"
+                Margin="10,5"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="(DDD)-XXXX-XXXX"
                 materialDesign:HintAssist.IsFloating="True"
+                Mask="(999)9999-9999"
+                Style="{StaticResource MaterialDesignTextBox}"
                 TabIndex="4" />
             <materialDesign:PackIcon
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
-                Margin="0"
-                HorizontalAlignment="Center"
+                Margin="5"
+                HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=Celular, Path=BorderBrush}"
+                Foreground="{Binding BorderBrush, ElementName=Celular}"
                 Kind="Cellphone" />
             <TextBlock
-                Grid.Row="5"
+                Grid.Row="3"
+                Grid.RowSpan="2"
                 Grid.Column="1"
+                Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Text="Celular:" />
-            <TextBox
-                Name="Celular"
-                Grid.Row="5"
+            <xctk:MaskedTextBox
+                x:Name="Celular"
+                Grid.Row="4"
                 Grid.Column="2"
-                Margin="10,0"
+                Margin="10,5"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="(DDD)-XXXXX-XXXX"
                 materialDesign:HintAssist.IsFloating="True"
+                Mask="(999)99999-9999"
+                Style="{StaticResource MaterialDesignTextBox}"
                 TabIndex="5" />
             <TextBlock
-                Margin="0,10,0,0"
-                Grid.ColumnSpan="2"
-                TextWrapping="Wrap"
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
-                Text="Responsável pelo contrato:" />
-            <ToggleButton Name="AlunoResponsavel" IsChecked="True" Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="AlunoResponsavel_Click"></ToggleButton>
-            <TextBox
-                Name="Responsavel"
-                Visibility="Hidden"
-                Grid.Column="2"
-                Margin="10,0"
-                VerticalAlignment="Center"
-                materialDesign:HintAssist.Hint="Nome do Responsável"
-                materialDesign:HintAssist.IsFloating="True"
-                TabIndex="7"
-                Grid.Row="7" />
-            <TextBox
-                Name="CPF"
+                Text="Responsável pelo contrato:"
+                TextWrapping="Wrap" />
+            <ToggleButton
+                x:Name="AlunoResponsavel"
+                Grid.Row="5"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="AlunoResponsavel_Click"
+                IsChecked="True"
+                TabIndex="6" />
+            <xctk:MaskedTextBox
+                x:Name="CPF"
+                Grid.Row="5"
                 Grid.Column="2"
                 Margin="10,10,10,0"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="CPF do Aluno"
                 materialDesign:HintAssist.IsFloating="True"
-                TabIndex="6"
-                Grid.Row="6" />
+                Mask="999,999,999-99"
+                Style="{StaticResource MaterialDesignTextBox}"
+                TabIndex="7" />
+            <!--#endregion-->
+            <!--#region Informaçoes de responsavel-->
+            <Grid
+                x:Name="InfoResponsavel"
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="0,20,0,5"
+                VerticalAlignment="Top"
+                Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="250" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Margin="0,5,0,10"
+                    HorizontalAlignment="Center"
+                    FontSize="18"
+                    FontWeight="DemiBold"
+                    Text="Responsável pelo Contrato" />
+                <materialDesign:PackIcon
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=NomeResp1}"
+                    Kind="Account" />
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Nome:" />
 
-            <Button
-                Name="BtnAlterar"
-                Grid.Row="8"
-                Grid.Column="2"
-                Width="100"
-                Margin="35,20,5,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Content="Alterar"
-                FontSize="15"
-                Style="{StaticResource MaterialDesignFlatButton}"
-                TabIndex="8" />
+                <TextBox
+                    x:Name="NomeResp1"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="Nome do Responsável Contrato"
+                    materialDesign:HintAssist.IsFloating="True"
+                    TabIndex="8" />
+
+                <materialDesign:PackIcon
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=DataNascimentoResp1}"
+                    Kind="Calendar" />
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Data Nasc:" />
+                <DatePicker
+                    x:Name="DataNascimentoResp1"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="10,15,10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="Data de Nascimento"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Language="pt-br"
+                    SelectedDateFormat="Short"
+                    TabIndex="9" />
+
+                <materialDesign:PackIcon
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=EmailResp1}"
+                    Kind="MailRu" />
+                <TextBlock
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="E-mail:" />
+                <TextBox
+                    x:Name="EmailResp1"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="E-mail do Responsável"
+                    materialDesign:HintAssist.IsFloating="True"
+                    TabIndex="10" />
+                <materialDesign:PackIcon
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=TelefoneResp1}"
+                    Kind="PhoneClassic" />
+                <TextBlock
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Telefone:" />
+                <xctk:MaskedTextBox
+                    x:Name="TelefoneResp1"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="(DDD)-XXXX-XXXX"
+                    materialDesign:HintAssist.IsFloating="True"
+                    HidePromptOnLeave="False"
+                    Mask="(999)9999-9999"
+                    Style="{StaticResource MaterialDesignTextBox}"
+                    TabIndex="11" />
+                <materialDesign:PackIcon
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=CelularResp1}"
+                    Kind="Cellphone" />
+                <TextBlock
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Celular:" />
+                <xctk:MaskedTextBox
+                    x:Name="CelularResp1"
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="(DDD)-XXXXX-XXXX"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Mask="(999)99999-9999"
+                    Style="{StaticResource MaterialDesignTextBox}"
+                    TabIndex="12" />
+
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="3"
+                    Margin="0,5,0,10"
+                    HorizontalAlignment="Center"
+                    FontSize="18"
+                    FontWeight="DemiBold"
+                    Text="Segundo Responsável" />
+                <materialDesign:PackIcon
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=NomeResp2}"
+                    Kind="Account" />
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="5"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Nome:" />
+
+                <TextBox
+                    x:Name="NomeResp2"
+                    Grid.Row="1"
+                    Grid.Column="6"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="Nome do Segundo Responsável"
+                    materialDesign:HintAssist.IsFloating="True"
+                    TabIndex="13" />
+
+                <materialDesign:PackIcon
+                    Grid.Row="2"
+                    Grid.Column="4"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=DataNascimentoResp2}"
+                    Kind="Calendar" />
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="5"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Data Nasc:" />
+                <DatePicker
+                    x:Name="DataNascimentoResp2"
+                    Grid.Row="2"
+                    Grid.Column="6"
+                    Margin="10,15,10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="Data de Nascimento"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Language="pt-br"
+                    SelectedDateFormat="Short"
+                    TabIndex="14" />
+
+                <materialDesign:PackIcon
+                    Grid.Row="3"
+                    Grid.Column="4"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=EmailResp2}"
+                    Kind="MailRu" />
+                <TextBlock
+                    Grid.Row="3"
+                    Grid.Column="5"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="E-mail:" />
+                <TextBox
+                    x:Name="EmailResp2"
+                    Grid.Row="3"
+                    Grid.Column="6"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="E-mail do Responsável"
+                    materialDesign:HintAssist.IsFloating="True"
+                    TabIndex="15" />
+                <materialDesign:PackIcon
+                    Grid.Row="4"
+                    Grid.Column="4"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=TelefoneResp2}"
+                    Kind="PhoneClassic" />
+                <TextBlock
+                    Grid.Row="4"
+                    Grid.Column="5"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Telefone:" />
+                <xctk:MaskedTextBox
+                    x:Name="TelefoneResp2"
+                    Grid.Row="4"
+                    Grid.Column="6"
+                    Margin="10,5"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="(DDD)-XXXX-XXXX"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Mask="(999)9999-9999"
+                    Style="{StaticResource MaterialDesignTextBox}"
+                    TabIndex="16" />
+                <materialDesign:PackIcon
+                    Grid.Row="5"
+                    Grid.Column="4"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=CelularResp2}"
+                    Kind="Cellphone" />
+                <TextBlock
+                    Grid.Row="5"
+                    Grid.Column="5"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="Celular:" />
+                <xctk:MaskedTextBox
+                    x:Name="CelularResp2"
+                    Grid.Row="5"
+                    Grid.Column="6"
+                    Margin="10,8,10,2"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="(DDD)-XXXXX-XXXX"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Mask="(999)99999-9999"
+                    Style="{StaticResource MaterialDesignTextBox}"
+                    TabIndex="17" />
+                <Border
+                    Grid.Row="1"
+                    Grid.RowSpan="7"
+                    Grid.Column="3"
+                    Width="1"
+                    Margin="0,20,0,0"
+                    BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+                    BorderThickness="1"
+                    Opacity="0.7" />
+            </Grid>
+            <!--#endregion-->
             <Button
                 Name="BtnExcluir"
                 Grid.Row="8"
                 Grid.Column="2"
-                Width="100"
-                Margin="5,20,5,0"
-                HorizontalAlignment="Right"
+                Width="120"
+                Margin="5,25,5,0"
+                HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Content="Deletar"
+                Content="Excluir Aluno"
                 FontSize="15"
                 Style="{StaticResource MaterialDesignFlatAccentButton}"
-                TabIndex="9" />
+                TabIndex="18" />
             <Button
-                Name="BtnCancelar"
-                Grid.Row="9"
+                x:Name="BtnAlterar"
+                Grid.Row="8"
+                Grid.Column="2"
+                Margin="0,25,5,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="Alterar"
+                FontSize="15"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                TabIndex="19" />
+            <Button
+                x:Name="BtnCancelar"
+                Grid.Row="8"
                 Grid.Column="3"
-                Width="100"
-                Margin="5,20,5,0"
+                Margin="5,25,5,0"
                 VerticalAlignment="Center"
                 Content="Cancelar"
                 FontSize="15"
                 Style="{StaticResource MaterialDesignFlatButton}"
-                TabIndex="10" />
+                TabIndex="20" />
         </Grid>
     </StackPanel>
 </UserControl>

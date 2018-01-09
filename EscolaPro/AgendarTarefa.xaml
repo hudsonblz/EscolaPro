@@ -15,8 +15,22 @@
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     mc:Ignorable="d">
-    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,50,10,10">
+    <StackPanel
+        Margin="10,10,10,20"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch">
+        <TextBlock
+            Margin="0,0,0,5"
+            HorizontalAlignment="Center"
+            FontSize="32"
+            FontWeight="Normal">
+            Agendar Tarefa
+        </TextBlock>
+        <Separator Margin="20,5" Background="{DynamicResource PrimaryHueMidBrush}" />
+        <Grid
+            Margin="10,30,10,10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -31,57 +45,79 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <materialDesign:PackIcon
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="0"
+                Width="20"
+                Height="20"
                 Margin="5"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                Foreground="{Binding ElementName=TxbTarefa, Path=BorderBrush}"
+                VerticalAlignment="Center"
+                Foreground="{Binding ElementName=txbTarefa, Path=BorderBrush}"
                 Kind="NoteText" />
             <TextBlock
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="1"
-                Margin="5"
-                VerticalAlignment="Bottom">
+                Margin="5,5,5,5"
+                VerticalAlignment="Center"
+                FontSize="16">
                 Tarefa:
             </TextBlock>
-            <RichTextBox
-                Name="TxbTarefa"
+            <TextBox
+                Name="txbTarefa"
                 Grid.Row="0"
-                Grid.RowSpan="2"
+                Grid.RowSpan="3"
                 Grid.Column="2"
-
-                Margin="10,20,10,30"
                 Width="350"
-                Height="100"
+                Height="200"
+                Margin="10,20,80,5"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Descreva aqui a tarefa"
                 materialDesign:HintAssist.IsFloating="True"
+                AcceptsReturn="True"
                 ScrollViewer.CanContentScroll="True"
                 SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
-                VerticalScrollBarVisibility="Visible" />
+                SpellCheck.IsEnabled="True"
+                Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                TabIndex="1"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto" />
             <Button
                 Name="BtnSalvar"
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.Column="2"
-                Width="100"
-                Margin="5,20,5,0"
+                Width="auto"
+                Margin="5,30,5,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Content="Salvar"
                 FontSize="15"
-                Style="{StaticResource MaterialDesignFlatButton}" />
+                Style="{StaticResource MaterialDesignFlatButton}"
+                TabIndex="3" />
             <Button
                 Name="BtnCancelar"
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.Column="3"
-                Width="100"
-                Margin="5,20,5,0"
+                Width="auto"
+                Margin="5,30,5,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Content="Cancelar"
                 FontSize="15"
-                Style="{StaticResource MaterialDesignFlatButton}" />
+                Style="{StaticResource MaterialDesignFlatButton}"
+                TabIndex="4" />
+            <Button
+                Name="BtnLimpar"
+                Grid.Row="3"
+                Grid.Column="2"
+                Width="auto"
+                Margin="5,5,15,5"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="BtnLimpar_Click"
+                Content="Limpar"
+                FontSize="15"
+                Style="{StaticResource MaterialDesignFlatAccentButton}"
+                TabIndex="2" />
 
         </Grid>
     </StackPanel>

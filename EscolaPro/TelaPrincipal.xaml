@@ -14,17 +14,14 @@
     Background="{DynamicResource MaterialDesignPaper}"
     FontFamily="{DynamicResource MaterialDesignFont}"
     FontWeight="Regular"
+    SizeChanged="Window_SizeChanged"
+    StateChanged="Window_StateChanged"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     TextOptions.TextFormattingMode="Ideal"
     TextOptions.TextRenderingMode="Auto"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <ScrollViewer
-        Name="ScroolTelaPrincipal"
-        VerticalAlignment="Top"
-        CanContentScroll="True"
-        HorizontalScrollBarVisibility="Auto"
-        VerticalScrollBarVisibility="Auto">
+    <StackPanel>
         <StackPanel>
             <materialDesign:ColorZone
                 Width="auto"
@@ -57,7 +54,11 @@
                                     <materialDesign:PackIcon Kind="Home" />
                                 </MenuItem.Icon>
                             </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Agendar Tarefas" Name="btnAgendarTarefa" Click="btnAgendarTarefa_Click">
+                            <MenuItem
+                                Name="btnAgendarTarefa"
+                                Background="{DynamicResource MaterialDesignPaper}"
+                                Click="btnAgendarTarefa_Click"
+                                Header="Agendar Tarefas">
                                 <MenuItem.Icon>
                                     <materialDesign:PackIcon Kind="CalendarClock" />
                                 </MenuItem.Icon>
@@ -91,6 +92,15 @@
                                     <materialDesign:PackIcon Kind="AccountPlus" />
                                 </MenuItem.Icon>
                             </MenuItem>
+                            <MenuItem
+                                Name="btnAlterarAluno"
+                                Background="{DynamicResource MaterialDesignPaper}"
+                                Click="btnAlterarAluno_Click"
+                                Header="_Alterar Aluno">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="AccountSettingsVariant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
                             <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Consultar Aluno">
                                 <MenuItem.Icon>
                                     <materialDesign:PackIcon Kind="AccountCardDetails" />
@@ -109,15 +119,30 @@
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="_Turmas">
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Cadastrar Turma">
+                            <MenuItem
+                                Name="btnCadastrarTurma"
+                                Background="{DynamicResource MaterialDesignPaper}"
+                                Click="btnCadastrarTurma_Click"
+                                Header="_Cadastrar Turma">
                                 <MenuItem.Icon>
                                     <materialDesign:PackIcon Kind="Plus" />
                                 </MenuItem.Icon>
                             </MenuItem>
 
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Alterar Turma">
+                            <MenuItem
+                                Background="{DynamicResource MaterialDesignPaper}"
+                                Click="MenuItem_Click"
+                                Header="_Alterar Turma">
                                 <MenuItem.Icon>
                                     <materialDesign:PackIcon Kind="TableEdit" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem
+                                Background="{DynamicResource MaterialDesignPaper}"
+                                Click="MenuItem_Click_1"
+                                Header="Procurar Turmas">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="Magnify" />
                                 </MenuItem.Icon>
                             </MenuItem>
                             <MenuItem
@@ -128,11 +153,7 @@
                                     <materialDesign:PackIcon Kind="CheckAll" />
                                 </MenuItem.Icon>
                             </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Procurar Turmas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Magnify" />
-                                </MenuItem.Icon>
-                            </MenuItem>
+
                             <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Atividades">
                                 <MenuItem.Icon>
                                     <materialDesign:PackIcon Kind="BookOpenPageVariant" />
@@ -198,9 +219,9 @@
                         </MenuItem>
                     </Menu>
                     <materialDesign:Badged
-                        Margin="40,0,10,0"
+                        Margin="40,0,20,0"
                         VerticalAlignment="Center"
-                        Badge="25">
+                        Badge="13">
                         <Button
                             Width="28"
                             Height="28"
@@ -214,13 +235,23 @@
                     </materialDesign:Badged>
                 </StackPanel>
             </materialDesign:ColorZone>
+        </StackPanel>
+        <ScrollViewer
+            Name="ScroolPrincipal"
+            Width="1014"
+            Height="460"
+            Margin="0,20,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto">
             <Frame
                 Name="Navegador"
-                Margin="20,30,20,10"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
                 NavigationUIVisibility="Hidden"
                 ScrollViewer.CanContentScroll="True" />
-        </StackPanel>
-    </ScrollViewer>
+        </ScrollViewer>
+    </StackPanel>
+
 </Window>

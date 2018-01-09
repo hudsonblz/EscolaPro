@@ -24,5 +24,10 @@ namespace EscolaPro
         {
             InitializeComponent();
         }
+
+        private void BtnLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txbTarefa.Text = null;
+        }
     }
 }

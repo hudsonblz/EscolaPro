@@ -1,0 +1,310 @@
+﻿<UserControl
+    x:Class="EscolaPro.AlterarChamada"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:EscolaPro"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Stretch"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    FontWeight="Regular"
+    TextElement.FontSize="16"
+    TextElement.FontWeight="Regular"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    mc:Ignorable="d">
+    <StackPanel
+        Margin="5,10,5,10"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch">
+        <TextBlock
+            Margin="0,0,0,5"
+            HorizontalAlignment="Center"
+            FontSize="32"
+            FontWeight="Normal">
+            Buscar Chamada
+        </TextBlock>
+        <Separator Margin="20,5" Background="{DynamicResource PrimaryHueMidBrush}" />
+        <Grid
+            Margin="20,0,20,2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon
+                Grid.Row="0"
+                Grid.Column="0"
+                Width="20"
+                Height="20"
+                Margin="5,5,5,10"
+                VerticalAlignment="Bottom"
+                Foreground="{StaticResource MaterialDesignTextBoxBorder}"
+                Kind="AccountCircle" />
+            <ComboBox
+                Name="cbxBuscaProfessor"
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="180"
+                Margin="10,10,10,5"
+                materialDesign:HintAssist.Hint="Professor"
+                materialDesign:HintAssist.IsFloating="True"
+                TabIndex="1" />
+            <ComboBox
+                Name="cbxBuscaTurma"
+                Grid.Row="0"
+                Grid.Column="2"
+                Width="180"
+                Margin="10,10,10,5"
+                materialDesign:HintAssist.Hint="Turma"
+                materialDesign:HintAssist.IsFloating="True"
+                TabIndex="2" />
+            <DatePicker
+                Name="dtpBuscaDataChamada"
+                Grid.Column="3"
+                Width="180"
+                Margin="10,10,10,4"
+                VerticalAlignment="Bottom"
+                materialDesign:HintAssist.Hint="Data da Chamada"
+                materialDesign:HintAssist.IsFloating="True"
+                TabIndex="3" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="4"
+                Margin="10,10,10,0"
+                VerticalAlignment="Center"
+                TabIndex="4">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon
+                            Width="24"
+                            Height="24"
+                            Kind="Magnify" />
+                        <TextBlock Margin="5,0,0,0" VerticalAlignment="Center">Pesquisar</TextBlock>
+                    </StackPanel>
+
+                </Button.Content>
+            </Button>
+        </Grid>
+        <Separator />
+        <Grid
+            Margin="20,5,20,2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="1"
+                Grid.RowSpan="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="5,32,5,5"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <materialDesign:PackIcon
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=dtpData}"
+                    Kind="CalendarToday" />
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="5"
+                    VerticalAlignment="Bottom">
+                    Data:
+                </TextBlock>
+                <DatePicker
+                    Name="dtpData"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="15,10,5,5"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom"
+                    materialDesign:HintAssist.Hint="Data da Aula"
+                    materialDesign:HintAssist.IsFloating="True"
+                    Language="pt-br" />
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="5"
+                    VerticalAlignment="Bottom">
+                    Professor:
+                </TextBlock>
+                <materialDesign:PackIcon
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    VerticalAlignment="Bottom"
+                    Foreground="{Binding BorderBrush, ElementName=cbxProfessor}"
+                    Kind="AccountCircle" />
+                <ComboBox
+                    Name="cbxProfessor"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="15,10,5,5"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom"
+                    materialDesign:HintAssist.Hint="Professor"
+                    materialDesign:HintAssist.IsFloating="True"
+                    TabIndex="18" />
+
+                <materialDesign:PackIcon
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Width="20"
+                    Height="20"
+                    Margin="5"
+                    VerticalAlignment="Bottom"
+                    Foreground="{DynamicResource MaterialDesignTextBoxBorder}"
+                    Kind="CheckCircleOutline" />
+                <TextBlock
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="5"
+                    VerticalAlignment="Bottom">
+                    Presença do professor:
+                </TextBlock>
+                <CheckBox
+                    Name="ckbProfessorPresente"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="15,25,5,5"
+                    VerticalAlignment="Bottom"
+                    Content="Presente"
+                    IsChecked="True" />
+            </Grid>
+
+
+
+            <StackPanel
+                Grid.Row="1"
+                Grid.RowSpan="4"
+                Grid.Column="4"
+                Margin="5">
+
+                <TextBlock
+                    Margin="10,5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    Chamada
+                </TextBlock>
+                <DataGrid
+                    Name="ltbListaAlunos"
+                    MinWidth="250"
+                    AutoGenerateColumns="False"
+                    CanUserAddRows="False"
+                    IsManipulationEnabled="False">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Aluno" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <materialDesign:Chip
+                                        Margin="10,0"
+                                        Content="{Binding Nome}"
+                                        Icon="{Binding Tag}" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Presença">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ToggleButton
+                                        Width="20"
+                                        Height="20"
+                                        Margin="2"
+                                        Background="#D50000"
+                                        IsChecked="{Binding Presente}"
+                                        Style="{StaticResource MaterialDesignActionToggleButton}"
+                                        TabIndex="8"
+                                        ToolTip="Presença">
+                                        <materialDesign:PackIcon
+                                            Width="20"
+                                            Height="20"
+                                            Kind="Close" />
+                                        <materialDesign:ToggleButtonAssist.OnContent>
+                                            <materialDesign:PackIcon
+                                                Width="20"
+                                                Height="20"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Background="#4CAF50"
+                                                Kind="Check" />
+                                        </materialDesign:ToggleButtonAssist.OnContent>
+                                    </ToggleButton>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            <Border
+                Grid.Row="0"
+                Grid.RowSpan="5"
+                Grid.Column="3"
+                Width="1"
+                Margin="0,15,0,0"
+                BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+                BorderThickness="1"
+                Opacity="0.7" />
+            <Button
+                x:Name="BtnAlterar"
+                Grid.Row="5"
+                Grid.Column="4"
+                Margin="0,25,5,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="Alterar"
+                FontSize="15"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                TabIndex="20" />
+            <Button
+                x:Name="BtnCancelar"
+                Grid.Row="5"
+                Grid.Column="5"
+                Margin="5,25,5,0"
+                VerticalAlignment="Center"
+                Content="Cancelar"
+                FontSize="15"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                TabIndex="21" />
+        </Grid>
+    </StackPanel>
+</UserControl>

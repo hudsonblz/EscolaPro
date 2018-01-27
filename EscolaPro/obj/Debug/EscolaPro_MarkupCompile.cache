@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\
+E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\
 EscolaPro
 none
 false
 DEBUG;TRACE
-C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\App.xaml
-91860880703
+E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\App.xaml
+111133610962
 
-15-1501739652
-261027358887
-AgendarTarefa.xaml;AlterarAluno.xaml;AlterarTurma.xaml;BuscarTurma.xaml;CadastrarAluno.xaml;CriarTurma.xaml;Home.xaml;MudarTema.xaml;TelaPrincipal.xaml;
+17-1886174309
+26-2018584839
+AgendarTarefa.xaml;AlterarAluno.xaml;AlterarChamada.xaml;AlterarTurma.xaml;BuscarTurma.xaml;CadastrarAluno.xaml;CriarChamada.xaml;CriarTurma.xaml;Home.xaml;MudarTema.xaml;TelaPrincipal.xaml;
 
 False
 

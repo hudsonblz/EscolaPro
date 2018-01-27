@@ -92,6 +92,9 @@
     <Compile Include="AlterarAluno.xaml.cs">
       <DependentUpon>AlterarAluno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AlterarChamada.xaml.cs">
+      <DependentUpon>AlterarChamada.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AlterarTurma.xaml.cs">
       <DependentUpon>AlterarTurma.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,9 @@
       <DependentUpon>CadastrarAluno.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cores.cs" />
+    <Compile Include="CriarChamada.xaml.cs">
+      <DependentUpon>CriarChamada.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CriarTurma.xaml.cs">
       <DependentUpon>CriarTurma.xaml</DependentUpon>
     </Compile>
@@ -120,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="AlterarChamada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AlterarTurma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CadastrarAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CriarChamada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

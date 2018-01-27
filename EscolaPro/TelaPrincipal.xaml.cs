@@ -34,6 +34,46 @@ namespace EscolaPro
             //Navegador.Navigate(new Conferencia(ActualHeight, ActualWidth));
         }
 
+
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ScroolPrincipal.Height = ActualHeight - 110;
+            ScroolPrincipal.Width = ActualWidth - 20;
+        }
+
+        private void Window_StateChanged(object sender, EventArgs e)
+        {
+            ScroolPrincipal.Height = ActualHeight - 110;
+            ScroolPrincipal.Width = ActualWidth - 20;
+        }
+
+        #region Controles
+
+        private void btnAlterarAluno_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new AlterarAluno());
+        }
+
+        private void btnCadastrarTurma_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new CriarTurma());
+        }
+
+        private void btnFazerChamada_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new CriarChamada());
+        }
+
+        private void btnBuscarTurma_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new BuscarTurma());
+        }
+
+        private void btnAlterarTurma_Click(object sender, RoutedEventArgs e)
+        {
+            Navegador.Navigate(new AlterarTurma());
+        }
         private void btnMudarTema_Click(object sender, RoutedEventArgs e)
         {
             Navegador.Navigate(new MudarTema(ActualHeight, ActualWidth));
@@ -59,36 +99,9 @@ namespace EscolaPro
             Navegador.Navigate(new AgendarTarefa());
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            ScroolPrincipal.Height = ActualHeight - 110;
-            ScroolPrincipal.Width = ActualWidth - 20;
-        }
 
-        private void Window_StateChanged(object sender, EventArgs e)
-        {
-            ScroolPrincipal.Height = ActualHeight - 110;
-            ScroolPrincipal.Width = ActualWidth - 20;
-        }
+        #endregion
 
-        private void btnAlterarAluno_Click(object sender, RoutedEventArgs e)
-        {
-            Navegador.Navigate(new AlterarAluno());
-        }
 
-        private void btnCadastrarTurma_Click(object sender, RoutedEventArgs e)
-        {
-            Navegador.Navigate(new CriarTurma());
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            Navegador.Navigate(new AlterarTurma());
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-            Navegador.Navigate(new BuscarTurma());
-        }
     }
 }

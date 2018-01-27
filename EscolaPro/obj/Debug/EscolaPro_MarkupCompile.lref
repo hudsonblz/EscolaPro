@@ -1,12 +1,14 @@
 ﻿
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\App.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\AgendarTarefa.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\AlterarAluno.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\AlterarTurma.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\CadastrarAluno.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\CriarTurma.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\Home.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\MudarTema.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\TelaPrincipal.xaml;;
-FC:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\BuscarTurma.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\App.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\AgendarTarefa.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\AlterarAluno.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\AlterarChamada.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\AlterarTurma.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\BuscarTurma.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\CadastrarAluno.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\CriarChamada.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\CriarTurma.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\Home.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\MudarTema.xaml;;
+FE:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\TelaPrincipal.xaml;;
 

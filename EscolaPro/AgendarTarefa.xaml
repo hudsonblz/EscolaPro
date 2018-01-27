@@ -37,6 +37,7 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
@@ -45,26 +46,58 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <materialDesign:PackIcon
-                Grid.Row="1"
+                Grid.Row="0"
+                Grid.Column="0"
+                Width="20"
+                Height="20"
+                Margin="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="{Binding ElementName=txbTarefa, Path=BorderBrush}"
+                Kind="TooltipText" />
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5,5,5,5"
+                VerticalAlignment="Bottom"
+                FontSize="16" HorizontalAlignment="Center">
+                Tarefa:
+            </TextBlock>
+            <TextBox
+                Name="txbTarefa"
+                Grid.Row="0"
+                Grid.Column="2"
+                Width="350"
+                materialDesign:HintAssist.Hint="Nome da Tarefa"
+                materialDesign:HintAssist.IsFloating="True"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="10,10,5,5"
+                AcceptsReturn="True"
+                SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                TabIndex="1"/>
+
+            <materialDesign:PackIcon
+                Grid.Row="2"
                 Grid.Column="0"
                 Width="20"
                 Height="20"
                 Margin="5"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Foreground="{Binding ElementName=txbTarefa, Path=BorderBrush}"
+                Foreground="{Binding ElementName=TxbDescricao, Path=BorderBrush}"
                 Kind="NoteText" />
             <TextBlock
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="1"
                 Margin="5,5,5,5"
                 VerticalAlignment="Center"
-                FontSize="16">
-                Tarefa:
+                FontSize="16" HorizontalAlignment="Center">
+                Descrição:
             </TextBlock>
             <TextBox
-                Name="txbTarefa"
-                Grid.Row="0"
+                Name="TxbDescricao"
+                Grid.Row="1"
                 Grid.RowSpan="3"
                 Grid.Column="2"
                 Width="350"
@@ -83,10 +116,10 @@
                 VerticalScrollBarVisibility="Auto" />
             <Button
                 Name="BtnSalvar"
-                Grid.Row="4"
+                Grid.Row="5"
                 Grid.Column="2"
                 Width="auto"
-                Margin="5,30,5,0"
+                Margin="5,20,5,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Content="Salvar"
@@ -95,10 +128,11 @@
                 TabIndex="3" />
             <Button
                 Name="BtnCancelar"
-                Grid.Row="4"
+                Grid.Row="5"
                 Grid.Column="3"
                 Width="auto"
-                Margin="5,30,5,0"
+                Margin="5,20
+                ,5,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Content="Cancelar"
@@ -107,17 +141,22 @@
                 TabIndex="4" />
             <Button
                 Name="BtnLimpar"
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.Column="2"
                 Width="auto"
                 Margin="5,5,15,5"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Click="BtnLimpar_Click"
-                Content="Limpar"
+               
                 FontSize="15"
                 Style="{StaticResource MaterialDesignFlatAccentButton}"
-                TabIndex="2" />
+                TabIndex="2">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Broom"></materialDesign:PackIcon>
+                    <TextBlock>Limpar</TextBlock>
+                </StackPanel>
+                </Button>
 
         </Grid>
     </StackPanel>

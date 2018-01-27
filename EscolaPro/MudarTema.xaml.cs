@@ -87,6 +87,9 @@ namespace EscolaPro
             CoresDeTema.Add(new Cores { CorNome = "Cinza", CorXaml = "Grey" });
             #endregion
 
+            CoresDeTema.Sort((a, b) => (a.CorNome.CompareTo(b.CorNome)));
+            CoresDestaques.Sort((a, b) => (a.CorNome.CompareTo(b.CorNome)));
+
         }
 
         private void cbxTema_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -34,7 +34,6 @@ e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\EscolaPr
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\EscolaPro.pdb
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CadastrarAluno.g.cs
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.Toolkit.dll
-e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.Toolkit.xml
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CadastrarAluno.baml
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarAluno.g.cs
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarAluno.baml
@@ -102,3 +101,28 @@ C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AlterarTurma.g.cs
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AlterarTurma.baml
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\BuscarTurma.g.cs
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\BuscarTurma.baml
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.AvalonDock.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\Xceed.Wpf.DataGrid.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarTurma.g.cs
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\BuscarTurma.g.cs
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarTurma.g.cs
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarTurma.baml
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\BuscarTurma.baml
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarTurma.baml
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarChamada.g.cs
+e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarChamada.baml
+E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.g.cs
+E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.baml

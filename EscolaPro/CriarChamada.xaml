@@ -298,6 +298,7 @@ Foreground="{DynamicResource MaterialDesignTextBoxBorder}"
                 FontSize="15"
                 Style="{StaticResource MaterialDesignFlatButton}"
                 TabIndex="21" />
+
         </Grid>
     </StackPanel>
 </UserControl>

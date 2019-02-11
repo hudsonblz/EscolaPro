@@ -57,7 +57,6 @@ C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\bin\Debug\MaterialDesignColors.pdb
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AgendarTarefa.g.cs
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AlterarAluno.g.cs
 C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\CadastrarAluno.g.cs
@@ -126,3 +125,10 @@ e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarCha
 e:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\CriarChamada.baml
 E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.g.cs
 E:\Documentos\Visual Studio 2017\Projects\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.baml
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.g.cs
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\CriarChamada.g.cs
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\AlterarChamada.baml
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\CriarChamada.baml
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\hudso\Documents\GitHub\EscolaPro\EscolaPro\obj\Debug\GeneratedInternalTypeHelper.g.cs

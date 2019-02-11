@@ -1,9 +1,8 @@
-﻿<Window
+﻿<Window xmlns:EscolaPro="clr-namespace:EscolaPro" 
     x:Class="EscolaPro.TelaPrincipal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:EscolaPro"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Escola Pro 0.9 Beta"
@@ -21,240 +20,249 @@
     TextOptions.TextRenderingMode="Auto"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <StackPanel>
+    <Grid>
         <StackPanel>
-            <materialDesign:ColorZone
-                Width="auto"
-                Height="68"
-                Margin="20,-20,20,4"
-                VerticalAlignment="Top"
-                materialDesign:ShadowAssist.ShadowDepth="Depth1"
-                materialDesign:ShadowAssist.ShadowEdges="All"
-                CornerRadius="20"
-                Mode="PrimaryDark">
-                <StackPanel
-                    Height="42"
-                    Margin="0,20,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Orientation="Horizontal">
-                    <Menu
+            <StackPanel>
+                <materialDesign:ColorZone
+                    Width="auto"
+                    Height="68"
+                    Margin="20,-20,20,4"
+                    VerticalAlignment="Top"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                    materialDesign:ShadowAssist.ShadowEdges="All"
+                    CornerRadius="20"
+                    Mode="PrimaryDark">
+                    <StackPanel
+                        Margin="0,20,0,0"
                         HorizontalAlignment="Center"
-                        materialDesign:ColorZoneAssist.Mode="PrimaryMid"
-                        Background="Transparent"
-                        FontSize="20"
-                        IsMainMenu="True">
-                        <MenuItem Header="_Home">
-                            <MenuItem
-                                Name="btnHome"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnHome_Click"
-                                Header="Tela Principal">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Home" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnAgendarTarefa"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnAgendarTarefa_Click"
-                                Header="Agendar Tarefas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="CalendarClock" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnMudarTema"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnMudarTema_Click"
-                                Header="Mudar Tema">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="FormatColorFill" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnSair"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnSair_Click"
-                                Header="Sair">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="ExitToApp" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <MenuItem Header="_Alunos">
-                            <MenuItem
-                                Name="btnCadastrarAluno"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnCadastrarAluno_Click"
-                                Header="_Cadastro">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="AccountPlus" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnAlterarAluno"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnAlterarAluno_Click"
-                                Header="_Alterar Aluno">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="AccountSettingsVariant" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Consultar Aluno">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="AccountCardDetails" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Notas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Numeric" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Ranking">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="FormatListNumbers" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <MenuItem Header="_Turmas">
-                            <MenuItem
-                                Name="btnCadastrarTurma"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnCadastrarTurma_Click"
-                                Header="_Cadastrar Turma">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Plus" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-
-                            <MenuItem
-                                Name="btnAlterarTurma"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnAlterarTurma_Click"
-                                Header="_Alterar Turma">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="TableEdit" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnBuscarTurma"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnBuscarTurma_Click"
-                                Header="Procurar Turmas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Magnify" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem
-                                Name="btnFazerChamada"
-                                Background="{DynamicResource MaterialDesignPaper}"
-                                Click="btnFazerChamada_Click"
-                                Header="_Fazer Chamada">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="CheckAll" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Atividades">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="BookOpenPageVariant" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="_Lançar Notas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Numeric" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Ranking">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="FormatListNumbers" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <MenuItem Header="_Financeiro">
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Pagamentos">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="CashUsd" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Despesas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="CreditCardOff" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Alterar Lançamentos">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="TableEdit" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <MenuItem Header="_Administrativo">
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Cadastrar Usuário">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="AccountPlus" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Alterar Usuário">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="TooltipEdit" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Estatísticas">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="ChartAreaspline" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <MenuItem Header="_Sobre">
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Suporte">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="HumanGreeting" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                            <MenuItem Background="{DynamicResource MaterialDesignPaper}" Header="Versão">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Information" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                    </Menu>
-                    <materialDesign:Badged
-                        Margin="40,0,20,0"
                         VerticalAlignment="Center"
-                        Badge="13">
-                        <Button
-                            Width="28"
-                            Height="28"
-                            Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
-                            ToolTip="Alertas">
-                            <materialDesign:PackIcon
-                                Width="20"
-                                Height="20"
-                                Kind="Alarm" />
-                        </Button>
-                    </materialDesign:Badged>
-                </StackPanel>
-            </materialDesign:ColorZone>
-        </StackPanel>
-        <ScrollViewer
-            Name="ScroolPrincipal"
-            Width="1014"
-            Height="460"
-            Margin="0,20,0,0"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"
-            HorizontalScrollBarVisibility="Auto"
-            VerticalScrollBarVisibility="Auto">
-            <Frame
-                Name="Navegador"
+                        Orientation="Horizontal">
+                        <Menu
+                            HorizontalAlignment="Center"
+                            materialDesign:ColorZoneAssist.Mode="PrimaryMid"
+                            Background="{DynamicResource PrimaryHueDarkBrush}"
+                            FontSize="20"
+                            IsMainMenu="True">
+                            <MenuItem Header="_Home">
+                                <MenuItem
+                                    Name="btnHome"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnHome_Click"
+                                    Header="Tela Principal">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Home" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnAgendarTarefa"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnAgendarTarefa_Click"
+                                    Header="Agendar Tarefas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CalendarClock" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnMudarTema"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnMudarTema_Click"
+                                    Header="Mudar Tema">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatColorFill" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnSair"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnSair_Click"
+                                    Header="Sair">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="ExitToApp" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Alunos">
+                                <MenuItem
+                                    Name="btnCadastrarAluno"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnCadastrarAluno_Click"
+                                    Header="_Cadastro">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountPlus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnAlterarAluno"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnAlterarAluno_Click"
+                                    Header="_Alterar Aluno">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountSettings" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="_Consultar Aluno">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountCardDetails" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Notas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Numeric" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Ranking">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatListNumbers" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Turmas">
+                                <MenuItem
+                                    Name="btnCadastrarTurma"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnCadastrarTurma_Click"
+                                    Header="_Cadastrar Turma">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Plus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem
+                                    Name="btnAlterarTurma"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnAlterarTurma_Click"
+                                    Header="_Alterar Turma">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TableEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnBuscarTurma"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnBuscarTurma_Click"
+                                    Header="Procurar Turmas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Magnify" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem
+                                    Name="btnFazerChamada"
+                                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                                    Click="btnFazerChamada_Click"
+                                    Header="_Fazer Chamada">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CheckAll" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="_Atividades">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="BookOpenPageVariant" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="_Lançar Notas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Numeric" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Ranking">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FormatListNumbers" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Financeiro">
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Pagamentos">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CashUsd" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Despesas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CreditCardOff" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Alterar Lançamentos">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TableEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Administrativo">
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Cadastrar Usuário">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountPlus" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Alterar Usuário">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="TooltipEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Estatísticas">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="ChartAreaspline" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Sobre">
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Suporte">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="HumanGreeting" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Background="{DynamicResource PrimaryHueDarkBrush}" Header="Versão">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="Information" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                        </Menu>
+                        <materialDesign:Badged
+                            Margin="40,0,20,0"
+                            VerticalAlignment="Center"
+                            Badge="13">
+                            <Button
+                                Width="28"
+                                Height="28"
+                                Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                                ToolTip="Alertas">
+                                <materialDesign:PackIcon
+                                    Width="20"
+                                    Height="20"
+                                    Kind="Alarm" />
+                            </Button>
+                        </materialDesign:Badged>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+            </StackPanel>
+            <ScrollViewer
+                Name="ScrollPrincipal"
+                Width="1014"
+                Height="460"
+                Margin="0,20,0,0"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
-                NavigationUIVisibility="Hidden"
-                ScrollViewer.CanContentScroll="True" />
-        </ScrollViewer>
-    </StackPanel>
-
+                HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Auto">
+                <Frame
+                    Name="Navegador"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    NavigationUIVisibility="Hidden"
+                    ScrollViewer.CanContentScroll="True" />
+            </ScrollViewer>
+        </StackPanel>
+        <materialDesign:DialogHost
+            x:Name="Teste"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            IsOpen="False">
+            <materialDesign:DialogHost.DialogContent>
+                <EscolaPro:AgendarTarefa />
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
 </Window>

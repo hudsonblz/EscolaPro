@@ -27,7 +27,7 @@ namespace EscolaPro
 
         private void BtnLimpar_Click(object sender, RoutedEventArgs e)
         {
-            txbTarefa.Text = null;
+            TxbDescricao.Clear();
         }
     }
 }

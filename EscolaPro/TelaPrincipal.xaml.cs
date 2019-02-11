@@ -38,17 +38,18 @@ namespace EscolaPro
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            ScroolPrincipal.Height = ActualHeight - 110;
-            ScroolPrincipal.Width = ActualWidth - 20;
+            ScrollPrincipal.Height = ActualHeight - 110;
+            ScrollPrincipal.Width = ActualWidth - 20;
+            
         }
 
         private void Window_StateChanged(object sender, EventArgs e)
         {
-            ScroolPrincipal.Height = ActualHeight - 110;
-            ScroolPrincipal.Width = ActualWidth - 20;
+            ScrollPrincipal.Height = ActualHeight - 110;
+            ScrollPrincipal.Width = ActualWidth - 20;
         }
 
-        #region Controles
+        #region ControlesMenu
 
         private void btnAlterarAluno_Click(object sender, RoutedEventArgs e)
         {
@@ -100,8 +101,12 @@ namespace EscolaPro
         }
 
 
+
         #endregion
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Teste.IsOpen = false;
+        }
     }
 }
